@@ -3,34 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terralina — New Website Coming Soon</title>
-  <meta name="description" content="Terralina is crafting a new home online. Premium customized embroidered Turkish towels and tote bags. New website on its way." />
+  <title>Terralina — Coming Soon</title>
+  <meta name="description" content="Terralina — premium customized embroidered Turkish towels and tote bags. Our new website is on its way." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Terralina — New Website Coming Soon" />
+  <meta property="og:title" content="Terralina — Coming Soon" />
   <meta property="og:description" content="Premium customized embroidered Turkish towels and tote bags. Our new website is on its way." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://terralina.co" />
 
-  <!-- Favicon: simple sage 'T' mark -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%239ba594'/><text x='50' y='72' font-family='Georgia,serif' font-size='62' fill='%23faf8f4' text-anchor='middle'>T</text></svg>" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap" rel="stylesheet" />
 
   <style>
     :root {
       --cream: #f5f3ef;
-      --cream-deep: #ece8e1;
       --sage: #9ba594;
-      --sage-soft: #c0cab9;
       --ink: #181818;
-      --muted: #838282;
+      --muted: #8d8c8a;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html, body { height: 100%; }
 
     body {
@@ -39,144 +34,68 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: radial-gradient(circle at 50% 30%, var(--cream) 0%, var(--cream-deep) 100%);
-      color: var(--ink);
+      background: var(--cream);
       font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
       -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
       padding: 2rem;
-      overflow: hidden;
     }
 
     .stage {
       text-align: center;
-      max-width: 640px;
-      animation: rise 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation: fade 1.6s cubic-bezier(0.16, 1, 0.3, 1) both;
     }
 
-    .eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 0.42em;
-      text-transform: uppercase;
-      color: var(--sage);
-      font-weight: 500;
-      margin-bottom: 1.6rem;
-      padding-left: 0.42em;
-    }
-
-    .wordmark {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-weight: 400;
-      font-size: clamp(3.2rem, 12vw, 6.2rem);
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      line-height: 1;
-      padding-left: 0.24em;
+    .logo {
+      width: clamp(220px, 46vw, 420px);
+      height: auto;
       color: var(--ink);
+      display: block;
+      margin: 0 auto;
     }
+    .logo path { fill: currentColor; }
 
-    .rule {
-      width: 0;
-      height: 1px;
-      background: var(--sage);
-      margin: 2.2rem auto 2rem;
-      animation: draw 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
-    }
-
-    .headline {
-      font-family: 'Cormorant Garamond', Georgia, serif;
+    .tagline {
+      margin-top: 2.6rem;
+      font-size: clamp(0.78rem, 2.4vw, 0.9rem);
       font-weight: 300;
-      font-style: italic;
-      font-size: clamp(1.4rem, 4.5vw, 2rem);
-      color: var(--ink);
-      margin-bottom: 1.1rem;
-    }
-
-    .blurb {
-      font-size: clamp(0.92rem, 2.6vw, 1.02rem);
-      font-weight: 300;
-      line-height: 1.75;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
       color: var(--muted);
-      max-width: 440px;
-      margin: 0 auto 2.6rem;
     }
-
-    .dots {
-      display: flex;
-      gap: 0.5rem;
-      justify-content: center;
-      margin-bottom: 2.8rem;
-    }
-    .dots span {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--sage);
-      opacity: 0.35;
-      animation: pulse 1.6s ease-in-out infinite;
-    }
-    .dots span:nth-child(2) { animation-delay: 0.25s; }
-    .dots span:nth-child(3) { animation-delay: 0.5s; }
 
     .contact {
-      font-size: 0.82rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
+      margin-top: 1.4rem;
+      font-size: clamp(0.78rem, 2.4vw, 0.9rem);
+      font-weight: 300;
+      letter-spacing: 0.14em;
     }
     .contact a {
       color: var(--ink);
       text-decoration: none;
-      border-bottom: 1px solid var(--sage-soft);
+      border-bottom: 1px solid var(--sage);
       padding-bottom: 2px;
-      transition: border-color 0.3s ease, color 0.3s ease;
+      transition: color 0.3s ease, border-color 0.3s ease;
     }
-    .contact a:hover {
-      color: var(--sage);
-      border-color: var(--sage);
-    }
+    .contact a:hover { color: var(--sage); }
 
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(18px); }
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(12px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    @keyframes draw {
-      to { width: 64px; }
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 0.25; transform: scale(1); }
-      50%      { opacity: 1;    transform: scale(1.35); }
-    }
-
     @media (prefers-reduced-motion: reduce) {
-      *, .stage, .rule, .dots span { animation: none !important; }
-      .rule { width: 64px; }
+      .stage { animation: none; }
     }
   </style>
 </head>
 <body>
   <main class="stage">
-    <p class="eyebrow">Turkish Cotton · Embroidered to Order</p>
+    <svg class="logo" viewBox="0 0 545 83" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Terralina">
+      <path d="M27.7852 82.2422H15.782V11.0011H2.98702e-05V-0.00183089H43.5671V11.0011H27.7852V82.2422ZM96.0507 82.2422H51.7056V-0.00183089H96.0507V11.0011H63.7088V35.2297H96.0507V46.2326H63.7088V71.2393H96.0507V82.2422ZM163.794 82.2422H148.79L121.672 44.121H121.45V82.2422H109.447V-0.00183089H135.787C155.57 -0.00183089 164.35 10.4454 164.35 27.3387C164.35 43.0096 152.347 51.234 140.788 51.5674L163.794 82.2422ZM121.45 42.4539H130.23C144.234 42.4539 152.347 37.008 152.347 26.3385C152.347 16.8915 144.789 11.0011 134.12 11.0011H121.45V42.4539ZM229.784 82.2422H214.78L187.662 44.121H187.439V82.2422H175.436V-0.00183089H201.777C221.56 -0.00183089 230.34 10.4454 230.34 27.3387C230.34 43.0096 218.337 51.234 206.778 51.5674L229.784 82.2422ZM187.439 42.4539H196.22C210.223 42.4539 218.337 37.008 218.337 26.3385C218.337 16.8915 210.779 11.0011 200.109 11.0011H187.439V42.4539ZM308.888 82.2422H296.107L286.994 58.0135H257.43L248.317 82.2422H235.647L266.877 -0.00183089H277.658L308.888 82.2422ZM282.881 47.0106L272.434 15.5578H272.212L261.654 47.0106H282.881ZM359.523 82.2422H318.957V-0.00183089H330.96V71.2393H359.523V82.2422ZM379.899 82.2422H367.896V-0.00183089H379.899V82.2422ZM461.792 82.2422H449.344L408.666 18.6698H408.444V82.2422H396.441V-0.00183089H409.556L449.566 62.5703H449.788V-0.00183089H461.792V82.2422ZM544.845 82.2422H532.064L522.95 58.0135H493.387L484.273 82.2422H471.603L502.834 -0.00183089H513.614L544.845 82.2422ZM518.838 47.0106L508.391 15.5578H508.169L497.61 47.0106H518.838Z"/>
+    </svg>
 
-    <h1 class="wordmark">Terralina</h1>
+    <p class="tagline">New website coming soon</p>
 
-    <div class="rule" aria-hidden="true"></div>
-
-    <p class="headline">Our new home is being woven.</p>
-
-    <p class="blurb">
-      We&rsquo;re crafting a fresh online experience for our premium
-      customized Turkish towels and tote bags. It will be here soon.
-    </p>
-
-    <div class="dots" aria-hidden="true">
-      <span></span><span></span><span></span>
-    </div>
-
-    <p class="contact">
-      For inquiries &amp; orders &nbsp;·&nbsp;
-      <a href="mailto:hello@terralina.co">hello@terralina.co</a>
-    </p>
+    <p class="contact"><a href="mailto:hello@terralina.co">hello@terralina.co</a></p>
   </main>
 </body>
 </html>
