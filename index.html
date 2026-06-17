@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terralina — New Website Coming Soon</title>
+  <meta name="description" content="Terralina is crafting a new home online. Premium customized embroidered Turkish towels and tote bags. New website on its way." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Terralina — New Website Coming Soon" />
+  <meta property="og:description" content="Premium customized embroidered Turkish towels and tote bags. Our new website is on its way." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://terralina.co" />
+
+  <!-- Favicon: simple sage 'T' mark -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%239ba594'/><text x='50' y='72' font-family='Georgia,serif' font-size='62' fill='%23faf8f4' text-anchor='middle'>T</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --cream: #f5f3ef;
+      --cream-deep: #ece8e1;
+      --sage: #9ba594;
+      --sage-soft: #c0cab9;
+      --ink: #181818;
+      --muted: #838282;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 50% 30%, var(--cream) 0%, var(--cream-deep) 100%);
+      color: var(--ink);
+      font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      padding: 2rem;
+      overflow: hidden;
+    }
+
+    .stage {
+      text-align: center;
+      max-width: 640px;
+      animation: rise 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: var(--sage);
+      font-weight: 500;
+      margin-bottom: 1.6rem;
+      padding-left: 0.42em;
+    }
+
+    .wordmark {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(3.2rem, 12vw, 6.2rem);
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      line-height: 1;
+      padding-left: 0.24em;
+      color: var(--ink);
+    }
+
+    .rule {
+      width: 0;
+      height: 1px;
+      background: var(--sage);
+      margin: 2.2rem auto 2rem;
+      animation: draw 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+    }
+
+    .headline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(1.4rem, 4.5vw, 2rem);
+      color: var(--ink);
+      margin-bottom: 1.1rem;
+    }
+
+    .blurb {
+      font-size: clamp(0.92rem, 2.6vw, 1.02rem);
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 440px;
+      margin: 0 auto 2.6rem;
+    }
+
+    .dots {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 2.8rem;
+    }
+    .dots span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--sage);
+      opacity: 0.35;
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+    .dots span:nth-child(2) { animation-delay: 0.25s; }
+    .dots span:nth-child(3) { animation-delay: 0.5s; }
+
+    .contact {
+      font-size: 0.82rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .contact a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--sage-soft);
+      padding-bottom: 2px;
+      transition: border-color 0.3s ease, color 0.3s ease;
+    }
+    .contact a:hover {
+      color: var(--sage);
+      border-color: var(--sage);
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes draw {
+      to { width: 64px; }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.25; transform: scale(1); }
+      50%      { opacity: 1;    transform: scale(1.35); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, .stage, .rule, .dots span { animation: none !important; }
+      .rule { width: 64px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="stage">
+    <p class="eyebrow">Turkish Cotton · Embroidered to Order</p>
+
+    <h1 class="wordmark">Terralina</h1>
+
+    <div class="rule" aria-hidden="true"></div>
+
+    <p class="headline">Our new home is being woven.</p>
+
+    <p class="blurb">
+      We&rsquo;re crafting a fresh online experience for our premium
+      customized Turkish towels and tote bags. It will be here soon.
+    </p>
+
+    <div class="dots" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+
+    <p class="contact">
+      For inquiries &amp; orders &nbsp;·&nbsp;
+      <a href="mailto:hello@terralina.co">hello@terralina.co</a>
+    </p>
+  </main>
+</body>
+</html>
